@@ -1,6 +1,6 @@
 # Espanso Search
 
-Search [espanso.org](https://espanso.org) matches with `esp` command. For those hard-to-remember expansion triggers.
+Search [Espanso](https://espanso.org) matches with `esp` command. For those hard-to-remember text expansion triggers.
 
 ## Installation
 
