@@ -10,10 +10,10 @@ const cmd = require('node-cmd')
 //@TODO --help page
 
 ;(() => {
+	// @TODO `/usr/bin/` might not be the case for everyone.
 	const espansoMatchesJSON = cmd.runSync('/usr/bin/espanso match list -j');
-	//@TODO check if returned data properly
+	// @TODO check if returned data properly before use
 	espansoMatches = JSON.parse( espansoMatchesJSON.data )
-	//console.log(espansoMatches)
 
 	// convert `triggers` to `trigger` for eaiser searching
 	// @TODO probably can configure fuse.js to look at the array, this may cause issue if querying an additional trigger
@@ -24,7 +24,7 @@ const cmd = require('node-cmd')
 	// search query
 	const query = process.argv.slice(2).join(' ')
 	if (query === '') {
-		console.log( chalk.red.bold( 'query required!' ) )
+		console.log( chalk.red.bold( 'query required! Eg `$ esp hello`' ) )
 		return
 	}
 	const fuseSearch = new Fuse(espansoMatches, {
@@ -32,12 +32,12 @@ const cmd = require('node-cmd')
 			"trigger",
 			"replace"
 		],
-		threshold: 0.25
+		threshold: 0.25 // @TODO this threshold should be up to the user
 	})
 	const queryResults = fuseSearch.search(query)
 
 	// find longest trigger to create a column for the trigger
-	// @TODO there should be a max for extreme use cases
+	// @TODO there should be a max length for extreme use cases
 	let maxLength = 0;
 	queryResults.forEach((result) => {
 		maxLength = result.item.trigger.length > maxLength ? result.item.trigger.length : maxLength;
