@@ -1,10 +1,10 @@
 # Espanso Search
 
-Search espanso.org matches with `esp` command.
+Search [espanso.org](https://espanso.org) matches with `esp` command. For those hard-to-remember expansion triggers.
 
 ## Installation
 
-Requires Espanso and [node](https://nodejs.org/).
+Requires [Espanso](https://espanso.org) and [node](https://nodejs.org/).
 
 #### Download
 
@@ -24,3 +24,7 @@ npm install -g .
 ```
 $ esp <keyword> 
 ```
+
+Lists out matches from the query, showing both the trigger and replacement values. Hit Enter to copy replacement value to clipboard.
+
+![](assets/demo.gif)
