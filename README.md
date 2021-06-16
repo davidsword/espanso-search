@@ -25,6 +25,7 @@ npm install -g .
 $ esp <keyword> 
 ```
 
-Lists out matches from the query, showing both the trigger and replacement values. Hit `Enter` to copy replacement value to clipboard.
+Lists out matches from the query (fuzzy searches triggers and replacements). 
+Hit `Enter` to copy the selected matches replacement value to clipboard.
 
 ![](assets/demo.gif)
