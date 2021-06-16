@@ -4,7 +4,7 @@ Search [Espanso](https://espanso.org) matches with `esp` command. For those hard
 
 ## Installation
 
-Requires [Espanso](https://espanso.org) and [node](https://nodejs.org/).
+Requires [Espanso](https://espanso.org), [node](https://nodejs.org/) & [npm](https://www.npmjs.com/).
 
 #### Download
 
@@ -25,6 +25,6 @@ npm install -g .
 $ esp <keyword> 
 ```
 
-Lists out matches from the query, showing both the trigger and replacement values. Hit Enter to copy replacement value to clipboard.
+Lists out matches from the query, showing both the trigger and replacement values. Hit `Enter` to copy replacement value to clipboard.
 
 ![](assets/demo.gif)
