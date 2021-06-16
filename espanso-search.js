@@ -4,7 +4,7 @@ const Fuse = require('fuse.js')
 const inquirer = require('inquirer')
 const clipboardy = require('clipboardy')
 const cliTruncate = require('cli-truncate')
-const chalk = require("chalk");
+const chalk = require('chalk')
 const cmd = require('node-cmd')
 
 //@TODO --help page
@@ -51,7 +51,7 @@ const cmd = require('node-cmd')
 
 	queryResults.forEach((result) => {
 		let triggerLengthDiff = maxLength - result.item.trigger.length;
-		let triggerLengthPadding = '   ';
+		let triggerLengthPadding = '   '; // default space between trigger and replacement in output
 		if ( triggerLengthDiff > 0 ) {
 			i = 0;
 			while (i < triggerLengthDiff) {
@@ -74,7 +74,7 @@ const cmd = require('node-cmd')
 		}])
 		.then(function (theChosenOne) {
 			if (theChosenOne.snippet === '.exit') {
-				return //silently
+				return // silently.
 			}
 			clipboardy.writeSync(theChosenOne.snippet)
 			console.log( chalk.green.bold( 'Value copied to clipboard!' ) )
