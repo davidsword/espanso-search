@@ -77,7 +77,7 @@ const cmd = require('node-cmd')
 				return // silently.
 			}
 			clipboardy.writeSync(theChosenOne.snippet)
-			console.log( chalk.green.bold( 'Value copied to clipboard!' ) )
+			console.log( chalk.green.bold( 'Replacement value copied to clipboard!' ) )
 		})
 
 })()
