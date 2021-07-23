@@ -49,6 +49,8 @@ const cmd = require('node-cmd')
 		value: '.exit'
 	}]
 
+	// @TODO if no results, error out immediatly instead of just blank results with .exit
+
 	queryResults.forEach((result) => {
 		let triggerLengthDiff = maxLength - result.item.trigger.length;
 		let triggerLengthPadding = '   '; // default space between trigger and replacement in output
